@@ -1,0 +1,13 @@
+{
+  "name": "happy-pulse",
+  "description": "Inspired by the Hueman app, a simple way to track your happiness level over time.",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.5.0",
+    "jade": "*"
+  }
+}
