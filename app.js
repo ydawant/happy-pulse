@@ -1,9 +1,18 @@
 var express = require("express"),
     routes = require("./routes"),
     http = require("http"),
-    path = require("path");
+    path = require("path"),
+    mongo = require("mongodb"),
+    mongoose = require("mongoose"),
+    mongoose = mongoose.connect('mongodb://localhost/happy-pulse');
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function callback() {
+})
 
 var app = express();
+
 
 app.set("port", process.env.PORT || 8888);
 app.set("views", path.join(__dirname, "views"));
